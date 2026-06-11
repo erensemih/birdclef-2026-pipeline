@@ -78,12 +78,13 @@ Focal recordings carry a primary species (label = 1.0) and any
 secondary species at a soft value (default 0.3). Soundscape rows are
 hard multi-hot.
 
-### Leaky full-train
+### Full-train
 
 The labelled train soundscape segments are put into the training set
 as themselves, and the same segments are also the validation set, so
-`val_macro_auc` here is leaky. Only the trend between epochs was
-used as the stop signal, not the absolute value.
+`val_macro_auc` reflects training fit rather than held-out
+performance. Only the trend between epochs was used as the stop
+signal, not the absolute value.
 
 ### Submit ensemble
 
@@ -207,10 +208,6 @@ cd repo
 python prepare_data.py
 ```
 
-The Kaggle submit path is the OGG `test_soundscapes` directory under
-`/kaggle/input/competitions/birdclef-2026/`; no conversion needed
-there.
-
 ## Usage
 
 ```bash
@@ -238,7 +235,7 @@ dataset matching the layout in `CFG.SUBMIT_CKPT_PATHS`, set
 
 ## Notes
 
-- Only the `_full` (leaky) training variant is included here. The
+- Only the `_full` training variant is included here. The
   hold-out variants (focal-only train, soundscape val) were used
   during exploration but are not in this repo.
 - A few exploratory variants — a SED attention head, an
