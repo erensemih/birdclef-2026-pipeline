@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# IDE / OS
+.idea/
+.vscode/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Project artefacts — checkpoints, audio, predictions, logs
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+*.wav
+*.ogg
+*.mp3
+*.flac
+*.csv
+*.tsv
+*.parquet
+submission*.csv
+runs/
+logs/
+wandb/
+
+# Datasets and the Perch SavedModel
+birdclef-2026/
+birdclef-2026-wav/
+train_audio/
+train_audio_wav/
+train_soundscapes/
+train_soundscapes_wav/
+test_soundscapes/
+perch_v2/
