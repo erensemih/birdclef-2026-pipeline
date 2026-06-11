@@ -2,11 +2,12 @@
 
 The audio-tagging pipeline put together for the
 [BirdCLEF+ 2026](https://www.kaggle.com/competitions/birdclef-2026)
-competition. Nothing exotic: a CNN student, Perch v2 as a frozen
-teacher, a few inference-time tricks, and a couple of training-time
-augmentations that did not end up helping. The submissions did not
-place well; this repository exists mainly to keep the iteration in
-one place.
+competition. The submissions did not place well; this repository
+exists mainly to keep the iteration in one place.
+
+A runnable end-to-end demo (1-epoch train + submit) is available as
+a public Kaggle notebook:
+[**birdclef-2026-submission**](https://www.kaggle.com/code/semiheren/birdclef-2026-submission).
 
 The shared code lives in a few small modules. Each numbered script is
 a thin `CFG` subclass that flips a couple of flags and calls `train()`
